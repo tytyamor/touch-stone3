@@ -1,0 +1,240 @@
+/* ==========================================
+   1. Design System Variables & Base Styles
+   ========================================== */
+:root {
+    --color-bg: #FDFBF7;          /* Warm cream background */
+    --color-card-bg: #FFFFFF;     /* White container background */
+    --color-text: #2C221E;        /* Dark espresso for high readability */
+    --color-primary: #8C302F;     /* Warm brick red / terracotta */
+    --color-accent: #D9A948;      /* Golden crust accent */
+    --color-border: #E6E0D5;      /* Subtle border line color */
+    
+    --font-heading: 'Georgia', serif;
+    --font-body: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Skip link for accessibility */
+a[href="#main-content"] {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a[href="#main-content"]:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: var(--color-primary);
+    color: #FFF;
+    z-index: 1000;
+}
+
+/* ==========================================
+   2. Header & Navigation Layout (Flexbox)
+   ========================================== */
+header {
+    background-color: var(--color-card-bg);
+    border-bottom: 2px solid var(--color-border);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+nav[aria-label="Primary"] ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+nav[aria-label="Primary"] a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav[aria-label="Primary"] a:hover,
+nav[aria-label="Primary"] a[aria-current="page"] {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+}
+
+header p {
+    font-style: italic;
+    color: #61554E;
+}
+
+/* ==========================================
+   3. Main Content & Layout Containers (Mobile-First Flexbox)
+   ========================================== */
+main {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    background-color: var(--color-card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+img, video, audio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+
+/* Form Styles for Contact Page */
+form fieldset {
+    border: 2px solid var(--color-border);
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+form legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0 0.5rem;
+}
+
+form div {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+form input, 
+form select, 
+form textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--color-bg);
+}
+
+form input:focus, 
+form select:focus, 
+form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(140, 48, 47, 0.15);
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #6e2524;
+}
+
+/* ==========================================
+   4. Footer
+   ========================================== */
+footer {
+    background-color: #2C221E;
+    color: #FDFBF7;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   5. Media Query for Desktop Screens (min-width: 800px)
+   ========================================== */
+@media (min-width: 800px) {
+    header {
+        padding: 2rem 2rem;
+    }
+
+    main {
+        padding: 3rem 2rem;
+    }
+
+    /* Example of layout adaptation for forms or side-by-side elements */
+    form div {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    form label {
+        width: 180px;
+        flex-shrink: 0;
+    }
+
+    form input, 
+    form select, 
+    form textarea {
+        flex-grow: 1;
+    }
+
+    button[type="submit"] {
+        margin-left: 180px;
+    }
+}

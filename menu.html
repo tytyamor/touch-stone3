@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="#main-content">Skip to main content</a>
+    <header>
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" aria-current="page">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Our Menu</h1>
+        <p>Always Fresh & Locally Sourced</p>
+        <!-- audio -->
+        <section>
+            <audio
+                src="images/bakery-welcome_c.mp3"
+                controls
+                preload="metadata">
+                Your browser does not support the audio element. <a href="images/bakery-welcome_c.mp3">
+                Download the audio instead.</a>
+            </audio>
+        </section>
+    </header>
+    <main id="main-content">
+        <h2>Browse our selection of fresh baked goods</h2>
+        <section>
+            <h3>Breads</h3>
+            <p>$5.50</p>
+            <figure>
+                <img src="images/bakery-bread_c.png"
+                alt="Fresh baked breads in display case"
+                width="600" height="400">
+            <figcaption>Our Signature Loaves</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h3>Pastries</h3>
+            <p>$2.50</p>
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/bakery-feature-large_c.png">
+                <img src="images/bakery-feature-small_c.png" alt="Assortment of baked desserts inside of a display case"
+                     width="600" height="400">
+            </picture>
+        </section>
+        <section>
+            <h3>Cakes</h3>
+            <ul>
+                <li>1 Tier $25</li>
+                <li>2 Tier $40</li>
+                <li>Wedding Cakes $75</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery</p>
+    </footer>
+</body>
+</html>
