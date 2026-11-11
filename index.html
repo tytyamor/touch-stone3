@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>North Star Bakery: Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="#main-content">Skip to main content</a>
+    <header>
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <picture>
+            <img src="images/bakery-logo_c.png" alt="Bakery Logo" width="800" height="700">
+            </picture>
+        </section>
+        <h1>North Star Bakery</h1>
+        <p>Where Parisian treats meet hometown comfort</p>
+
+    </header>
+    <main id="main-content">
+        <section>
+            <h2>Welcome to the North Star Bakery</h2>
+            <p>Step inside and experience the aroma of freshly baked croissants, artisan sourdoughs, and decadent pastries made daily from scratch.
+                We combine classic French technique with warm hometown hospitality.</p>
+        </section>
+
+        <!-- responsive image -->
+        <section>
+            <h3>Our Storefront</h3>
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/bakery-storefront_c.png">
+                <img src="images/bakery-storefront_c.png" alt="Photo of bakery storefront" width="600" height="400">
+            </picture>
+        </section>
+        <!-- figure with caption -->
+        <section>
+            <video controls width="600" height="450">
+                <source src="images/bakery-behind-scenes_c.mp4" type="video/mp4">
+                Your browser does not support the video tag. <a href="images/bakery-behind-scenes_c.mp4">
+                Download the video</a> instead.
+            </video>
+            <h3>Behind the Scenes:</h3>
+            <p>Artisan bread loaves being removed from the oven.</p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
